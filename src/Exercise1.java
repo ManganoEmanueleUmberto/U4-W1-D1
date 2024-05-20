@@ -22,12 +22,24 @@ public class Exercise1 {
     }
     public static String[] addToArray (String[] array, String word){
         String[] arrayReturn= new String[6];
-        arrayReturn[0]= array[0];
+
+       /* arrayReturn[0]= array[0];
         arrayReturn[1]= array[1];
         arrayReturn[2]= word;
         arrayReturn[3]= array[2];
         arrayReturn[4]= array[3];
         arrayReturn[5]= array[4];
+        */
+
+        for (int i = 0; i <arrayReturn.length ; i++) {
+            if(i<2){
+                arrayReturn[i]= array[i];
+            } else if (i==2) {
+                arrayReturn[i]= word;
+            }else{
+                arrayReturn[i]= array[i-1];
+            }
+        }
         return arrayReturn;
     }
 }
